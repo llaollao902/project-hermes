@@ -1,6 +1,6 @@
 <div align="center">
 
-<h3 align="center">Project HERMES</h1>
+<h1 align="center">Project HERMES</h1>
 
 <p align="center">
   Centralized DRRM (Disaster Risk Reduction and Management) communication control center for incident reporting and information dissemination.
