@@ -1,8 +1,9 @@
-export default function Logo({ className = '' }) {
+export default function Logo({ size = 36, className = '' }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
+      width={size}
       className={`w-full h-auto ${className}`}
       fill="currentColor"
     >

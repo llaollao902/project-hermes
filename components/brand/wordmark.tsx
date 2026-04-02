@@ -1,8 +1,9 @@
-export default function Wordmark({ className = '' }) {
+export default function Wordmark({ size = 124, className = '' }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2848.52 500"
+      width={size}
       className={`w-full h-auto ${className}`}
       fill="currentColor"
     >

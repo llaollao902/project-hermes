@@ -1,8 +1,9 @@
-export default function WordmarkLogo({ className = '' }) {
+export default function WordmarkLogo({ size = 148, className = '' }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3526.56 501.8"
+      width={size}
       className={`w-full h-auto ${className}`}
       fill="currentColor"
     >
