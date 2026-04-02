@@ -2,7 +2,7 @@
 
 import { useActionState } from 'react';
 
-import { acceptAccountInviteAction } from '@/lib/auth/actions';
+import { acceptAccountInviteAction } from '@/lib/auth/invite-actions';
 import type { AppRole, AuthActionState } from '@/lib/auth/types';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';

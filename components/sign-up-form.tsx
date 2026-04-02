@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { createBootstrapAdminAction } from '@/lib/auth/actions';
+import { createBootstrapAdminAction } from '@/lib/auth/bootstrap-actions';
 import type { AuthActionState } from '@/lib/auth/types';
 import { Button } from '@/components/ui/button';
 import {

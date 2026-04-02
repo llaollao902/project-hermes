@@ -2,7 +2,7 @@
 
 import { useActionState } from 'react';
 
-import { reissueAccountInviteAction } from '@/lib/auth/actions';
+import { reissueAccountInviteAction } from '@/lib/auth/invite-actions';
 import type { AuthActionState, InviteRecord } from '@/lib/auth/types';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
