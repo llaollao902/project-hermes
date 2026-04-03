@@ -3,7 +3,7 @@ import { DataTable } from '@/components/control-center/data-table';
 import { SectionCards } from '@/components/control-center/section-cards';
 import data from './data.json';
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className="@container/main flex flex-1 flex-col gap-4 py-4 md:gap-6 md:py-6">
       <SectionCards />

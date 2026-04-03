@@ -2,7 +2,6 @@
 
 import {
   IconDotsVertical,
-  IconLogin,
   IconLogout,
   IconUserCircle,
 } from '@tabler/icons-react';
@@ -21,17 +20,15 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
 } from '@/components/ui/sidebar';
-import { useUser } from '@/hooks/use-user';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { createClient } from '@/lib/supabase/client';
+import { User } from '@supabase/supabase-js';
 import { useRouter } from 'next/navigation';
 
-export function NavUser() {
+export function NavUser({ user }: { user: User }) {
   const router = useRouter();
-
-  const { isMobile } = useSidebar();
-  const { user, loading } = useUser();
+  const isMobile = useIsMobile();
 
   const logout = async () => {
     const supabase = createClient();
@@ -43,7 +40,7 @@ export function NavUser() {
     return email ? email[0].toUpperCase() : '';
   };
 
-  return !loading && user ? (
+  return (
     <SidebarMenu>
       <SidebarMenuItem>
         <DropdownMenu>
@@ -99,15 +96,6 @@ export function NavUser() {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-      </SidebarMenuItem>
-    </SidebarMenu>
-  ) : (
-    <SidebarMenu>
-      <SidebarMenuItem>
-        <SidebarMenuButton>
-          <IconLogin />
-          Sign in
-        </SidebarMenuButton>
       </SidebarMenuItem>
     </SidebarMenu>
   );
